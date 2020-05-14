@@ -4,7 +4,6 @@ img=cv2.imread('T2.jpg')  #image loading  (enter the path of your image)
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 blur = cv2.GaussianBlur(gray, (7,7), 0)     #GAUSSAIAN BLUR
 thresh=cv2.threshold(blur,200,255,cv2.THRESH_BINARY_INV)[1]
-thresh_os=cv2.threshold(gray,0,255,cv2.THRESH_BINARY_INV+cv2.THRESH_BINARY_INV)[1]
 thresh_OTSU=cv2.threshold(blur,0,255,cv2.THRESH_BINARY_INV+cv2.THRESH_OTSU)[1]          #OTSU THRERSHOLDING
 
 #dialation and opening
